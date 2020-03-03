@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Dino : MonoBehaviour
 {
-    public float speed;
     public float jump;
     private float move;
     public Rigidbody2D body;
@@ -17,7 +16,7 @@ public class Dino : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             body.velocity = Vector2.up * jump;
         }
