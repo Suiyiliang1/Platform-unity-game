@@ -43,6 +43,12 @@ public class MenuButton : MonoBehaviour
         Mainmenu.SetActive(false);
     }
 
+    public void BacktoMain()
+    {
+        highscoreboard.SetActive(false);
+        Mainmenu.SetActive(true);
+    }
+
     public void Exit()
     {
         Application.Quit();
