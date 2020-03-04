@@ -3,22 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Score : MonoBehaviour
+public class NameDisplay : MonoBehaviour
 {
-    public float score;
-    public TextMeshProUGUI scoretext;
+
+    public TextMeshProUGUI NameText;
     // Start is called before the first frame update
     void Start()
     {
-        score = 0f;
-
+        NameText.text = PlayerPrefs.GetString("name");
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoretext.text = (int)score + "";
-        score += 10 * (Time.deltaTime);
-        PlayerPrefs.SetFloat("Highscore", score);
+        
     }
 }
