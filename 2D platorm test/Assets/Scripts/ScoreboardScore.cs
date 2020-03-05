@@ -23,8 +23,11 @@ public class ScoreboardScore : MonoBehaviour
     {
         if(Updateonce == false)
         {
-            
-            LoadScore();
+            string path = Application.persistentDataPath + "/ScoreData.json";
+            if (File.Exists(path))
+            {
+                LoadScore();
+            }           
             tempscore = PlayerPrefs.GetFloat("Highscore");
             Debug.Log(tempscore);
             Debug.Log(Score.text);

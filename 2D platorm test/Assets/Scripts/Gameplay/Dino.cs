@@ -7,6 +7,7 @@ public class Dino : MonoBehaviour
     public float jump;
     private float move;
     public Rigidbody2D body;
+     
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +17,13 @@ public class Dino : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(body.position.y <= -1.1)
         {
-            body.velocity = Vector2.up * jump;
-        }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                body.velocity = Vector2.up * jump;
+            }
+        }       
+
     }
 }
